@@ -1,0 +1,164 @@
+@font-face {
+    font-family: InterBold;
+    src: url('./Inter-Bold.ttf');
+}
+
+@font-face {
+    font-family: InterRegular;
+    src: url('./Inter-Regular.ttf');
+}
+
+body {
+    background-color: #fff; /* Add your preferred background color here */
+    color: #000; /* Add your preferred text color here */
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: InterRegular;
+}
+
+* {
+    cursor: crosshair;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 1000vh
+}
+.sectionOne {
+    position: relative;
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-block: 15px;
+}
+
+nav > p {
+    font-family: InterBold;
+    font-size: 1.2em;
+}
+
+.landingpage-cta {
+    height: 100svh;
+    max-width: 650px;
+    position: relative; /* Ensure the parent has a positioning context */
+    color: #000; /* Add your preferred text color here */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.cta-heading {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    font-family: InterBold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: opacity 0.1s ease;
+}
+
+.cta-subtext {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    font-family: InterRegular;
+    font-size: 14px;
+    margin-block-end: 20px;
+    transition: opacity 0.1s ease;
+}
+
+.cta-button {
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.section-two-heading {
+    opacity: 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    font-family: InterBold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: opacity 0.2s ease;
+}
+
+main > section {
+    height: 100vh; /* Corrected from 100svh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* Ensure the parent has a positioning context */
+}
+
+.cursor {
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    z-index: 100; /* Ensure it's positioned above other elements */
+    filter: invert(1); 
+    z-index: 1000; /* Ensure it's positioned above other elements */
+    pointer-events: none; /* Make sure the cursor doesn't interfere with mouse events */
+    transition: top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    width 0.3s ease,
+    height 0.3s ease;
+
+}
+}
+
+.cta-heading,
+.cta-subtext {
+    /* Add the following styles to invert the color of the text */
+    filter: invert(1);
+}
+
+.scroll {
+
+    align-self: center;
+
+}
+
+.landingpage-cta > a {
+    width: 80%;
+    background-color: #000;
+    padding: 10px 5px;
+    border-radius: 100px;
+    font-family: InterRegular;
+    text-decoration: none;
+    color: #fff;
+}
+
+.scroll {
+    display: flex;
+    justify-content: center;
+}
+.scroll > a {
+
+    color: #333;
+}
+
+.sectionTwo, .sectionThree, .sectionFour > h2, p {
+    position: fixed;
+}
