@@ -28,53 +28,49 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     display: flex;
     top: 0;
-    z-index: 1;
     display: flex;
     justify-content: center;
-
-    color: #000; /* Add your preferred text color here */
+    flex-direction: column;
 }
 
 nav {
     position: fixed;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     margin-block: 15px;
-    color: black;
-
+    z-index: 2;
+    mix-blend-mode: difference;
 }
 
-.sectionOne nav > p {
-    color: #fff
+nav p {
+    position: relative;
+    color: #fff;
     font-family: InterBold;
     font-size: 1.2em;
-}
+}   
 
 .landingpage-cta {
     width: 100%;
     height: 100vh;
     position: relative;
     background-color: #fff;
-    color: #000;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
 }
 
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
     position: relative; /* Use relative positioning for the cta-heading and cta-subtext */
-    font-family: InterRegular;
     margin-bottom: 10px;
-    transition: opacity 0s ease;
+    transition: opacity 0.1s ease;
 }
 
 .landingpage-cta .cta-heading {
+    font-family: InterBold;
     color: #fff;
     font-size: 1.7em;
 }
@@ -82,13 +78,16 @@ nav {
 .landingpage-cta .cta-subtext {
     color: #fff;
     font-family: InterRegular;
+
     font-size: 0.9em;
+    max-width: 800px;
 }
 .landingpage-cta .cta-button {
     position: relative; /* Use relative positioning for the cta-button */
 }
 
 .cursor {
+    display: block;
     position: fixed;
     top: 4%;
     left: 50%;
@@ -97,24 +96,49 @@ nav {
     height: 150px;
     border-radius: 50%;
     mix-blend-mode: difference;
-    z-index: 1000; /* Ensure it's positioned above other elements */
+    z-index: 2000;
     filter: invert(1);
-    pointer-events: none; /* Make sure the cursor doesn't interfere with mouse events */
+    pointer-events: none;
     transition: top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
-    left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
-    width 0.3s ease,
-    height 0.3s ease;
-    
-
-}
+      left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+      width 0.3s ease,
+      height 0.3s ease;
+  }
 
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
+    transition: opacity 0.1s ease;
     filter: invert(1); /* Add the filter to invert the color of the text */
+}
+
+.strokeBusiness {
+    width: 0;
+height: 100vh;
+position: relative;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+}
+
+.section-two-heading {
+    position: relative;
+    top: -0%;
+    color: #fff;
+    transition: opacity 1s ease;
 }
 
 .scroll {
     align-self: center;
+}
+
+#blobSvg2 {
+    width: 0;
+    height: 0;
+    display: none;
+    transition: 1s ease ;
 }
 
 .landingpage-cta > a {
@@ -146,4 +170,4 @@ p {
 .scroll-container {
     height: 2000vh; /* Höhe größer als Viewport, um Platz zum Scrollen zu schaffen */
     overflow-y: scroll; /* Zeige vertikalen Scrollbalken bei Bedarf */
-  }
+}
