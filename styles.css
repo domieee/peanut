@@ -127,7 +127,7 @@ padding: 0px;
     position: relative;
     top: -0%;
     color: #fff;
-    transition: opacity 1s ease;
+    transition: 1s ease;
 }
 
 .scroll {

@@ -97,9 +97,15 @@ function updateCursorPositionOnScroll() {
         secondBlob.style.height = 0
     }
 
-
-
     // <---
+
+    if (scrollTop >= 4370) {
+        sectionTwoHeading.style.top = '-10%'
+    }
+
+    if (scrollTop <= 4370) {
+        sectionTwoHeading.style.top = '0%'
+    }
 }
 
 
