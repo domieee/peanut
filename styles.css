@@ -44,11 +44,29 @@ nav {
 }
 
 nav p {
+    top: 0;
+    left: 2.25%;
     position: relative;
     color: #fff;
     font-family: InterBold;
     font-size: 1.2em;
 }   
+
+nav button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 100px;
+    border: 0;
+    width: 75px;
+    height: 75px;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    left: 40%;
+    top: -90%;
+    justify-self: flex-end;
+}  
 
 .landingpage-cta {
     width: 100%;
@@ -65,7 +83,7 @@ nav p {
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
     position: relative; /* Use relative positioning for the cta-heading and cta-subtext */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: opacity 0.1s ease;
 }
 
@@ -99,8 +117,9 @@ nav p {
     z-index: 2000;
     filter: invert(1);
     pointer-events: none;
-    transition: top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
-      left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transition: 
+    top 0.3s cubic-bezier(.55,.28,.85,.5),
+      left 0.3s cubic-bezier(.55,.28,.85,.5),
       width 0.3s ease,
       height 0.3s ease;
   }
@@ -127,7 +146,17 @@ padding: 0px;
     position: relative;
     top: -0%;
     color: #fff;
-    transition: 1s ease;
+    transition: 0.2s linear;
+}
+.section-two-subheading {
+    margin-top: 5px;
+    font-family: InterRegular;
+    max-width: 800px;
+    position: relative;
+    top: -0%;
+    color: #fff;
+    transition:  0.2s linear;
+
 }
 
 .scroll {
@@ -135,10 +164,15 @@ padding: 0px;
 }
 
 #blobSvg2 {
+    position: fixed;
+    top: '4%';
+    left: '50%';
     width: 0;
     height: 0;
     display: none;
-    transition: 1s ease ;
+    transition: 0.5s 
+    top 0.1s cubic-bezier(.55,.28,.85,.5),
+    left 0.1s cubic-bezier(.55,.28,.85,.5), ;
 }
 
 .landingpage-cta > a {
@@ -162,7 +196,7 @@ padding: 0px;
 
 .sectionTwo,
 .sectionThree,
-.sectionFour > h2,
+.sectionFour > h2
 p {
     position: fixed;
 }
@@ -170,4 +204,47 @@ p {
 .scroll-container {
     height: 2000vh; /* Höhe größer als Viewport, um Platz zum Scrollen zu schaffen */
     overflow-y: scroll; /* Zeige vertikalen Scrollbalken bei Bedarf */
+}
+
+.tasks-container {
+    top: 30%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    text-align: start;
+    width: 80%;
+    opacity: 1;
+
+}
+
+
+.task-dev  {
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.task-design  {
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.task-ci  {
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.task-dev-heading {
+    color: #fff;
+    font-size: 1.5em;
+
+    margin-bottom: 10px;
+}
+
+.task-dev-text {
+    font-family: InterRegular;
+    font-size: 14px;
+    color: #fff;
 }
