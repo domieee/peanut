@@ -1,6 +1,7 @@
 const cursor = document.querySelector('.cursor');
 
 const cta = document.querySelector('.landingpage-cta')
+const body = document.querySelector('body');
 
 const ctaHeading = document.querySelector('.cta-heading');
 const ctaSubtext = document.querySelector('.cta-subtext')
@@ -52,10 +53,11 @@ function updateCursorPositionOnScroll() {
         ctaHeading.style.opacity = 0
         ctaSubtext.style.opacity = 0
         sectionTwoHeading.style.opacity = 1
-        cta.style.backgroundColor = '#000'
+        setInterval(() => { cursor.style.opacity = 0 }, 1000)
+        body.style.backgroundColor = '#000'
 
     } else {
-        cta.style.backgroundColor = '#fff'
+        body.style.backgroundColor = none
         ctaHeading.style.opacity = 1
         ctaSubtext.style.opacity = 1
         sectionTwoHeading.style.opacity = 0
