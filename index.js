@@ -11,6 +11,11 @@ const sectionTwoHeading = document.querySelector('.section-two-heading')
 const sectionTwoSubHeading = document.querySelector('.section-two-subheading')
 const navButton = document.querySelector('.navButton')
 
+const allrounder = document.querySelector('.allrounder')
+
+const ctaButton = document.querySelector('.cta-button')
+const vcsButton = document.querySelector('.vcs-button')
+
 const taskDev = document.querySelector('.task-dev')
 
 const taskDesign = document.querySelector('.task-design')
@@ -47,16 +52,25 @@ function updateCursorPositionOnScroll() {
         cursor.style.left = '50%'
     }
 
-    if (scrollTop > 1350) {
+    if (scrollTop > 1150) {
         cursor.style.width = '40%'
         cursor.style.height = '40%'
         cursor.style.left = `${40}%`
         cursor.style.top = `${32}%`
+
     }
 
-    if (scrollTop > 2500) {
-        cursor.style.width = '25%'
-        cursor.style.height = '25%'
+
+    if (scrollTop > 2100) {
+        cursor.style.width = '30%'
+        cursor.style.height = '30%'
+        cursor.style.left = '64%'
+        cursor.style.top = '40%'
+    }
+
+    if (scrollTop > 3000) {
+        cursor.style.width = '120%'
+        cursor.style.height = '120%'
         cursor.style.left = '61%'
         cursor.style.top = '36%'
     }
@@ -80,11 +94,9 @@ function updateCursorPositionOnScroll() {
     }
 
     if (blobExpanded && cursor.offsetHeight >= 3600) {
-
         stroke.style.opacity = 1
         stroke.style.width = '100%'
         stroke.style.height = '100vh'
-
         sectionTwoHeading.style.opacity = 1
         cta.style.opacity = 0
         cta.style.width = 0
@@ -112,15 +124,17 @@ function updateCursorPositionOnScroll() {
     // <---
 
     if (scrollTop >= 5000) {
+        vcsButton.style.opacity = 1
         sectionTwoHeading.style.top = '-5%'
         secondBlob.style.width = '150%'
         secondBlob.style.height = '150%'
-        secondBlob.style.top = '50%'
+        secondBlob.style.top = '300%'
         sectionTwoSubHeading.style.opacity = 1
         sectionTwoSubHeading.style.top = '-5%'
     }
 
-    if (scrollTop <= 5000) {
+    if (scrollTop < 5000) {
+        vcsButton.style.opacity = 0
         sectionTwoHeading.style.top = '0%'
         sectionTwoSubHeading.style.opacity = 0
         sectionTwoSubHeading.style.top = '0%'
@@ -128,26 +142,24 @@ function updateCursorPositionOnScroll() {
 
     if (scrollTop >= 6000) {
         sectionTwoHeading.style.top = '-5%'
-        secondBlob.style.top = '30%'
+        secondBlob.style.top = '300%'
         sectionTwoHeading.style.opacity = 0
         sectionTwoSubHeading.style.opacity = 0
-
+        secondBlob.style.width = '40%'
+        secondBlob.style.height = '40%'
+        secondBlob.style.left = '22%'
+        secondBlob.style.top = '31%'
+        vcsButton.style.opacity = 0
     }
 
-    if (scrollTop <= 6000) {
-        secondBlob.style.top = '0%'
+    if (scrollTop < 6000) {
         sectionTwoHeading.style.display = 'block'
         sectionTwoSubHeading.style.display = 'block'
-
     }
 
     if (scrollTop >= 6500) {
         taskDev.style.opacity = 1
         taskDev.style.opacity = 1
-        secondBlob.style.width = '40%'
-        secondBlob.style.height = '40%'
-        secondBlob.style.left = '20%'
-        secondBlob.style.top = '30%'
     }
 
     if (scrollTop <= 6500) {
@@ -165,7 +177,7 @@ function updateCursorPositionOnScroll() {
         secondBlob.style.width = '45%'
         secondBlob.style.height = '45%'
         secondBlob.style.left = '49%'
-        secondBlob.style.top = '30%'
+        secondBlob.style.top = '28%'
     }
 
     if (scrollTop <= 8000) {
@@ -178,10 +190,10 @@ function updateCursorPositionOnScroll() {
         taskCi.style.opacity = 1
         taskDesign.style.opacity = 0
         taskDesign.style.opacity = 0
-        secondBlob.style.width = '35%'
-        secondBlob.style.height = '35%'
+        secondBlob.style.width = '3/%'
+        secondBlob.style.height = '3/%'
         secondBlob.style.left = '76%'
-        secondBlob.style.top = '35%'
+        secondBlob.style.top = '30%'
     }
 
     if (scrollTop <= 9000) {
@@ -190,23 +202,58 @@ function updateCursorPositionOnScroll() {
     }
 
     if (scrollTop >= 10000) {
+        ctaButton.style.opacity = 1
         taskDev.style.opacity = 1
         taskDev.style.opacity = 1
         taskDesign.style.opacity = 1
         taskDesign.style.opacity = 1
         taskCi.style.opacity = 1
         taskCi.style.opacity = 1
-
-        secondBlob.style.width = '200%'
-        secondBlob.style.height = '200%'
-        secondBlob.style.left = '76%'
+        allrounder.style.opacity = 0
+        secondBlob.style.width = '120%'
+        secondBlob.style.height = '120%'
+        secondBlob.style.left = '40%'
         secondBlob.style.top = '35%'
+    }
+    if (scrollTop <= 10000) {
+        ctaButton.style.opacity = 0
+    }
+
+    if (scrollTop >= 11000) {
+
+        taskDev.style.opacity = 0
+        taskDev.style.opacity = 0
+        taskDesign.style.opacity = 0
+        taskDesign.style.opacity = 0
+        taskCi.style.opacity = 0
+        taskCi.style.opacity = 0
+        allrounder.style.opacity = 0
+        ctaButton.style.opacity = 0
+        secondBlob.style.width = '220%'
+        secondBlob.style.height = '220%'
+        secondBlob.style.left = '56%'
+        secondBlob.style.top = '35%'
+    }
+
+    if (scrollTop > 11500) {
+        allrounder.style.opacity = 1
+        ctaButton.style.opacity = 1
+    }
+
+    if (scrollTop > 12500) {
+        secondBlob.style.width = '2200%'
+        secondBlob.style.height = '2200%'
+        allrounder.style.opacity = 0
+        ctaButton.style.opacity = 0
     }
 
 
 }
 
+ctaButton.addEventListener('click', () => {
+    window.open('https://calendly.com/dominikgartz', '_blank');
 
+})
 
 // Attach the updateCursorPositionOnScroll function to the scroll event
 window.addEventListener('scroll', () => {
