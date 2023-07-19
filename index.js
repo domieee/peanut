@@ -53,11 +53,10 @@ function updateCursorPositionOnScroll() {
         ctaHeading.style.opacity = 0
         ctaSubtext.style.opacity = 0
         sectionTwoHeading.style.opacity = 1
-        setInterval(() => { cursor.style.opacity = 0 }, 1000)
-        body.style.backgroundColor = '#000'
+
 
     } else {
-        body.style.backgroundColor = none
+        body.style.backgroundColor = '#fff'
         ctaHeading.style.opacity = 1
         ctaSubtext.style.opacity = 1
         sectionTwoHeading.style.opacity = 0
