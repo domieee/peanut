@@ -53,6 +53,11 @@ function updateCursorPositionOnScroll() {
         ctaHeading.style.opacity = 0
         ctaSubtext.style.opacity = 0
         sectionTwoHeading.style.opacity = 1
+        sectionTwoHeading.style.color = '#fff'
+
+        if (cursor.style.width >= 4000) {
+            cursor.style.opacity = 0
+        }
 
 
     } else {
