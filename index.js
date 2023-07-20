@@ -10,7 +10,6 @@ const ctaSubtext = document.querySelector('.cta-subtext')
 const sectionTwoHeading = document.querySelector('.section-two-heading')
 const sectionTwoSubHeading = document.querySelector('.section-two-subheading')
 const navButton = document.querySelector('.navButton')
-
 const allrounder = document.querySelector('.allrounder')
 
 const ctaButton = document.querySelector('.cta-button')
@@ -126,8 +125,8 @@ function updateCursorPositionOnScroll() {
     if (scrollTop >= 5000) {
         vcsButton.style.opacity = 1
         sectionTwoHeading.style.top = '-5%'
-        secondBlob.style.width = '150%'
-        secondBlob.style.height = '150%'
+        secondBlob.style.width = '170%'
+        secondBlob.style.height = '170%'
         secondBlob.style.top = '300%'
         sectionTwoSubHeading.style.opacity = 1
         sectionTwoSubHeading.style.top = '-5%'
@@ -212,8 +211,8 @@ function updateCursorPositionOnScroll() {
         allrounder.style.opacity = 0
         secondBlob.style.width = '120%'
         secondBlob.style.height = '120%'
-        secondBlob.style.left = '40%'
-        secondBlob.style.top = '35%'
+        secondBlob.style.left = '50%'
+        secondBlob.style.top = '40%'
     }
     if (scrollTop <= 10000) {
         ctaButton.style.opacity = 0
@@ -229,8 +228,8 @@ function updateCursorPositionOnScroll() {
         taskCi.style.opacity = 0
         allrounder.style.opacity = 0
         ctaButton.style.opacity = 0
-        secondBlob.style.width = '220%'
-        secondBlob.style.height = '220%'
+        secondBlob.style.width = '240%'
+        secondBlob.style.height = '240%'
         secondBlob.style.left = '56%'
         secondBlob.style.top = '35%'
     }
