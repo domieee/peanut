@@ -35,6 +35,22 @@ function updateProgressBar() {
   document.getElementById("progressBar").style.width = scrollPercentage + "%";
 }
 
+function changeThemeColor(color) {
+  // Find the existing theme-color meta tag
+  var metaThemeColor = document.querySelector("meta[name=theme-color]");
+
+  // If the meta tag exists, change its content attribute to the new color
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute("content", color);
+  } else {
+    // If the meta tag does not exist, create one and append it to the <head>
+    metaThemeColor = document.createElement("meta");
+    metaThemeColor.name = "theme-color";
+    metaThemeColor.content = color;
+    document.getElementsByTagName("head")[0].appendChild(metaThemeColor);
+  }
+}
+
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
   const scrollFactor = 0.3;
@@ -107,6 +123,7 @@ function updateCursorPositionOnScroll() {
     cursor.style.left = "50%";
     cursor.style.top = "4%";
     container.style.backgroundColor = "#000";
+    changeThemeColor("#000");
     secondBlob.style.display = "block";
     secondBlob.style.width = "150px";
     secondBlob.style.height = "150px";
