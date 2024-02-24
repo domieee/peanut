@@ -26,6 +26,15 @@ const techno = document.querySelector(".techno");
 let blobExpanded = false;
 let blobTriggered = false;
 
+function updateProgressBar() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  var scrollPercentage = (scrollTop / scrollHeight) * 100;
+  document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
   const scrollFactor = 0.3;
@@ -209,10 +218,12 @@ function updateCursorPositionOnScroll() {
   }
 }
 
-ctaButton.addEventListener("click", () => {
-  window.open("https://calendly.com/dominikgartz", "_blank");
-});
-
 window.addEventListener("scroll", () => {
   updateCursorPositionOnScroll();
 });
+
+// Event listener for scroll events to update the progress bar
+window.addEventListener("scroll", updateProgressBar);
+
+// Initial update in case the page is not at the top when loaded
+updateProgressBar();
