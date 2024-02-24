@@ -106,7 +106,7 @@ function updateCursorPositionOnScroll() {
   if (!blobExpanded && cursor.offsetHeight <= 3600) {
     cta.style.width = "100%";
     container.style.backgroundColor = "#fff";
-    sectionTwoHeading.style.opacity = 0;
+
     cta.style.opacity = 1;
     stroke.style.opacity = 0;
     stroke.style.width = 0;
