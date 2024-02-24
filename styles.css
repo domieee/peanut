@@ -1,336 +1,339 @@
 @font-face {
-    font-family: InterBold;
-    src: url('./Inter-Bold.ttf');
+  font-family: InterBold;
+  src: url("./Inter-Bold.ttf");
 }
 
 @font-face {
-    font-family: InterRegular;
-    src: url('./Inter-Regular.ttf');
+  font-family: InterRegular;
+  src: url("./Inter-Regular.ttf");
 }
 
 body {
-
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: InterBold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: InterBold;
 }
 
 * {
-    cursor: crosshair;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  cursor: crosshair;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-gutter: scroll;
 }
 
-
 .sectionOne {
-    position: sticky;
-    display: flex;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  position: sticky;
+  display: flex;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-block: 15px;
-    z-index: 2;
-    mix-blend-mode: difference;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-block: 15px;
+  z-index: 2;
+  mix-blend-mode: difference;
 }
 
 nav p {
-    top: 0;
-    left: 2.25%;
-    position: relative;
-    color: #fff;
-    font-family: InterBold;
-    font-size: 1.2em;
-}   
+  top: 0;
+  left: 2.25%;
+  position: relative;
+  color: #fff;
+  font-family: InterBold;
+  font-size: 1.2em;
+}
 
 .dot {
-    color:orange;
-    margin: 0;
+  color: orange;
+  margin: 0;
 }
 
 nav button {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 100px;
-    border: 0;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    background-color: #fff;
-    color: #000;
-    position: relative;
-    left: 40%;
-    top: -90%;
-    justify-self: flex-end;
-    transition:  0.2s ease;
-} 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 100px;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  left: 30%;
+  top: -90%;
+  justify-self: flex-end;
+  transition: 0.2s ease;
+}
 
 nav button:hover {
-background-color: orange;
+  background-color: orange;
 }
 
 .landingpage-cta {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
-    position: relative; /* Use relative positioning for the cta-heading and cta-subtext */
-    margin-bottom: 7.5px;
-    transition: opacity 0.1s ease;
+  position: relative; /* Use relative positioning for the cta-heading and cta-subtext */
+  margin-bottom: 7.5px;
+  transition: opacity 0.1s ease;
 }
 
 .landingpage-cta .cta-heading {
-    font-family: InterBold;
-    color: #fff;
-    font-size: 2em;
+  font-family: InterBold;
+  color: #fff;
+  font-size: 2em;
 }
 
 .landingpage-cta .cta-subtext {
-    color: #fff;
-    font-family: InterRegular;
-    font-size: 1em;
-    max-width: 800px;
-    line-height: 20px;
+  color: #fff;
+  font-family: InterRegular;
+  font-size: 1em;
+  max-width: 800px;
+  line-height: 20px;
 }
 .landingpage-cta .cta-button {
-    position: relative; /* Use relative positioning for the cta-button */
+  position: relative; /* Use relative positioning for the cta-button */
 }
 
 .vcs-button {
-    z-index: 10004;
-    opacity: 0;
-    margin-top: 10px;
-    font-family: InterBold;
-    font-size: 1em;
-    border: 0;
-    outline: 0;
-    background-color: blue;
-    color: #fff;
-    padding: 12.5px 20px;
-    border-radius: 100px;
-    transition: 0.2s ease;
+  z-index: 10004;
+  opacity: 0;
+  margin-top: 10px;
+  font-family: InterBold;
+  font-size: 1em;
+  border: 0;
+  outline: 0;
+  background-color: blue;
+  color: #fff;
+  padding: 12.5px 20px;
+  border-radius: 100px;
+  transition: 0.2s ease;
 }
 
 .vcs-button:hover {
-    background-color: orange;
-    color: #000;
+  background-color: orange;
+  color: #000;
 }
 
 .cursor {
-    display: block;
-    position: fixed;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    mix-blend-mode: difference;
-    z-index: 2000;
-    filter: invert(1);
-    pointer-events: none;
-    transition: 
-    top 0.3s cubic-bezier(.55,.28,.85,.5),
-      left 0.3s cubic-bezier(.55,.28,.85,.5),
-      width 0.3s ease,
-      height 0.3s ease;
-  }
+  display: block;
+  position: fixed;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 2000;
+  filter: invert(1);
+  pointer-events: none;
+  transition: top 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5),
+    left 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5), width 0.3s ease,
+    height 0.3s ease;
+}
 
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
-    transition: opacity 0.1s ease;
-    filter: invert(1); /* Add the filter to invert the color of the text */
+  transition: opacity 0.1s ease;
+  filter: invert(1); /* Add the filter to invert the color of the text */
 }
 
 .strokeBusiness {
-    width: 0;
-height: 100vh;
-position: relative;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 0px;
+  width: 0;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 }
 
 .section-two-heading {
-    position: relative;
-    top: -0%;
-    color: #fff;
-    font-size: 1.6em;
-    transition: 0.2s linear;
+  position: relative;
+  top: -0%;
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.2s linear;
 }
 .section-two-subheading {
-    margin-top: 7.5px;
-    font-family: InterRegular;
-    font-size: 1em;
-    max-width: 800px;
-    position: relative;
-    line-height: 20px;
-    color: #fff;
-    transition:  0.2s linear;
+  margin-top: 7.5px;
+  font-family: InterRegular;
+  font-size: 1em;
+  max-width: 800px;
+  position: relative;
+  line-height: 20px;
+  color: #fff;
+  transition: 0.2s linear;
 }
 
 .scroll {
-    align-self: center;
+  align-self: center;
 }
 
 #blobSvg2 {
-    position: fixed;
-    top: '4%';
-    left: '50%';
-    width: 0;
-    height: 0;
-    display: none;
-    transition: 0.5s 
-    top 0.1s cubic-bezier(.55,.28,.85,.5),
-    left 0.1s cubic-bezier(.55,.28,.85,.5), ;
-    z-index: 9999;
+  position: fixed;
+  top: "4%";
+  left: "50%";
+  width: 0;
+  height: 0;
+  display: none;
+  transition: 0.5s top 0.1s cubic-bezier(0.55, 0.28, 0.85, 0.5),
+    left 0.1s cubic-bezier(0.55, 0.28, 0.85, 0.5);
+  z-index: 9999;
 }
 
 .landingpage-cta > a {
-    width: 80%;
-    background-color: #000;
-    padding: 10px 5px;
-    border-radius: 100px;
-    font-family: InterRegular;
-    text-decoration: none;
-    color: #fff;
+  width: 80%;
+  background-color: #000;
+  padding: 10px 5px;
+  border-radius: 100px;
+  font-family: InterRegular;
+  text-decoration: none;
+  color: #fff;
 }
 
 .scroll {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .scroll > a {
-    color: #333;
+  color: #333;
 }
 
 .sectionTwo,
 .sectionThree,
-.sectionFour > h2
-p {
-    position: fixed;
+.sectionFour > h2 p {
+  position: fixed;
 }
 
 .scroll-container {
-    height: 2000vh; /* Höhe größer als Viewport, um Platz zum Scrollen zu schaffen */
-    overflow-y: scroll; /* Zeige vertikalen Scrollbalken bei Bedarf */
+  height: 2000vh; /* Höhe größer als Viewport, um Platz zum Scrollen zu schaffen */
+  overflow-y: scroll; /* Zeige vertikalen Scrollbalken bei Bedarf */
 }
 
 .tasks-container {
-    top: 30%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    text-align: start;
-    width: 80%;
-    opacity: 1;
-
+  top: 30%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  text-align: start;
+  width: 80%;
+  opacity: 1;
 }
 
 .cta-button {
-    z-index: 100001;
-    opacity: 0;
-    margin-top: 15px;
-    font-family: InterBold;
-    font-size: 1em;
-    border: 0;
-    outline: 0;
-    background-color: blue;
-    color: #fff;
-    padding: 12.5px 20px;
-    border-radius: 100px;
-    transition: 0.1s ease;
+  z-index: 100001;
+  opacity: 0;
+  margin-top: 15px;
+  font-family: InterBold;
+  font-size: 1em;
+  border: 0;
+  outline: 0;
+  background-color: blue;
+  color: #fff;
+  padding: 12.5px 20px;
+  border-radius: 100px;
+  transition: 0.1s ease;
 }
 
 .cta-button:hover {
-    background-color: orange;
-    color: #000;
+  background-color: orange;
+  color: #000;
 }
 .task-logo {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .icon-tabler {
-    z-index: 100000;
-color: #fff;
+  z-index: 100000;
+  color: #fff;
 }
 
-.task-dev  {
-    max-width: 275px;
-    opacity: 0;
-    transition: opacity 0.1s linear;
+.task-dev {
+  max-width: 275px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
 }
 
-.task-design  {
-    max-width: 275px;
-    opacity: 0;
-    transition: opacity 0.1s linear;
+.task-design {
+  max-width: 275px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
 }
 
-.task-ci  {
-    max-width: 275px;
-    opacity: 0;
-    transition: opacity 0.1s linear;
+.task-ci {
+  max-width: 275px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
 }
 
 .task-dev-heading {
-    color: #fff;
-    font-size: 1.3em;
-    margin-bottom: 7.5px;
+  color: #fff;
+  font-size: 1.3em;
+  margin-bottom: 7.5px;
 }
 
 .task-dev-text {
-    font-family: InterRegular;
-    font-size: 1em;
-    color: #fff;
-    margin-top: auto;
-    line-height: 20px;
+  font-family: InterRegular;
+  font-size: 1em;
+  color: #fff;
+  margin-top: auto;
+  line-height: 20px;
+}
+
+.task-item {
+  position: absolute;
 }
 
 .allrounder {
-    position: absolute;
-    opacity: 0;
-    transition: 0.2s ease;
-    text-align: center;
-    max-width: 800px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s ease;
+  text-align: center;
+  max-width: 800px;
 }
 
-.allrounder-heading{
-    color: #fff;
-    font-size: 1.6em;
-    margin-bottom: 7.5px;
+.allrounder-heading {
+  color: #fff;
+  font-size: 1.6em;
+  margin-bottom: 7.5px;
 }
 
-.allrounder-text{
-    font-family: InterRegular;
-    font-size: 1em;
-    color: #fff;
-    margin-top: auto;
-    line-height: 20px;
+.allrounder-text {
+  font-family: InterRegular;
+  font-size: 1em;
+  color: #fff;
+  margin-top: auto;
+  line-height: 20px;
 }
