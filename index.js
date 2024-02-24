@@ -34,14 +34,19 @@ function updateCursorPositionOnScroll() {
 
   if (scrollTop >= 100) {
     navButton.style.opacity = 1;
+    cursor.style.opacity = 1;
   }
 
   if (scrollTop <= 100) {
     navButton.style.opacity = 0;
+    cursor.style.opacity = 0;
   }
 
-  if (scrollTop <= 1700) {
-    cursor.style.top = `${4 + cursorOffset / 10}%`;
+  if (scrollTop < 2800) {
+    cursor.style.width = "200px";
+    cursor.style.height = "200px";
+    cursor.style.left = "50%";
+    cursor.style.top = "50%";
   }
 
   if (scrollTop > 2800) {
@@ -127,11 +132,6 @@ function updateCursorPositionOnScroll() {
     sectionTwoSubHeading.style.opacity = 0;
 
     vcsButton.style.opacity = 0;
-  }
-
-  if (scrollTop < 6000) {
-    sectionTwoHeading.style.display = "block";
-    sectionTwoSubHeading.style.display = "block";
   }
 
   if (scrollTop >= 6500) {

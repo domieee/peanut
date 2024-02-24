@@ -150,11 +150,12 @@ nav button:hover {
 .cursor {
   display: block;
   position: fixed;
-  top: 4%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
   border-radius: 50%;
   mix-blend-mode: difference;
   z-index: 2000;
@@ -287,19 +288,19 @@ nav button:hover {
 }
 
 .task-dev {
-  max-width: 275px;
+  max-width: 400px;
   opacity: 0;
   transition: opacity 0.1s linear;
 }
 
 .task-design {
-  max-width: 275px;
+  max-width: 400px;
   opacity: 0;
   transition: opacity 0.1s linear;
 }
 
 .task-ci {
-  max-width: 275px;
+  max-width: 400px;
   opacity: 0;
   transition: opacity 0.1s linear;
 }
