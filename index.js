@@ -51,6 +51,8 @@ function changeThemeColor(color) {
   }
 }
 
+document.documentElement.scrollTop = 0;
+
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
   const scrollFactor = 0.3;
@@ -211,19 +213,18 @@ function updateCursorPositionOnScroll() {
     allrounder.style.opacity = 0;
   }
   if (scrollTop <= 9500) {
+    allrounder.style.opacity = 0;
     ctaButton.style.opacity = 0;
   }
 
-  if (scrollTop >= 11000) {
-    allrounder.style.opacity = 0;
-    ctaButton.style.opacity = 0;
+  if (scrollTop >= 9500) {
     secondBlob.style.width = "240%";
     secondBlob.style.height = "240%";
     secondBlob.style.left = "56%";
     secondBlob.style.top = "35%";
   }
 
-  if (scrollTop > 11500) {
+  if (scrollTop > 9500) {
     allrounder.style.opacity = 1;
     ctaButton.style.opacity = 1;
   }

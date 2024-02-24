@@ -344,6 +344,7 @@ nav button:hover {
 
 .task-item {
   position: absolute;
+  top: 0%;
 }
 
 .allrounder {
