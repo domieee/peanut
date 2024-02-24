@@ -109,6 +109,7 @@ function updateCursorPositionOnScroll() {
     cursor.style.opacity = 1;
     blobExpanded = false;
     container.classList.remove(".sectionOneScrolled");
+    changeThemeColor("#fff");
   }
 
   if (blobExpanded && cursor.offsetHeight >= 3600) {
@@ -123,6 +124,7 @@ function updateCursorPositionOnScroll() {
     cursor.style.top = "4%";
     container.style.backgroundColor = "#000";
     container.classList.add("sectionOneScrolled");
+    changeThemeColor("#000");
     secondBlob.style.display = "block";
     secondBlob.style.width = "150px";
     secondBlob.style.height = "150px";
