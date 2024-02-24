@@ -162,7 +162,7 @@ function updateCursorPositionOnScroll() {
     sectionTwoSubHeading.style.top = "0%";
   }
 
-  if (scrollTop >= 6000) {
+  if (scrollTop >= 6500) {
     sectionTwoHeading.style.top = "-5%";
     secondBlob.style.top = "300%";
     sectionTwoHeading.style.opacity = 0;
@@ -171,46 +171,46 @@ function updateCursorPositionOnScroll() {
     vcsButton.style.opacity = 0;
   }
 
-  if (scrollTop >= 6000) {
+  if (scrollTop >= 6500) {
     taskDev.style.opacity = 1;
     taskDev.style.opacity = 1;
   }
 
-  if (scrollTop <= 6000) {
+  if (scrollTop <= 6500) {
     taskDev.style.opacity = 0;
     taskDev.style.opacity = 0;
   }
 
-  if (scrollTop >= 7000) {
+  if (scrollTop >= 7500) {
     taskDev.style.opacity = 0;
     taskDev.style.opacity = 0;
     taskDesign.style.opacity = 1;
     taskDesign.style.opacity = 1;
   }
 
-  if (scrollTop <= 7000) {
+  if (scrollTop <= 7500) {
     taskDesign.style.opacity = 0;
     taskDesign.style.opacity = 0;
   }
 
-  if (scrollTop >= 8000) {
+  if (scrollTop >= 8500) {
     taskCi.style.opacity = 1;
     taskCi.style.opacity = 1;
     taskDesign.style.opacity = 0;
     taskDesign.style.opacity = 0;
   }
 
-  if (scrollTop <= 8000) {
+  if (scrollTop <= 8500) {
     taskCi.style.opacity = 0;
     taskCi.style.opacity = 0;
   }
 
-  if (scrollTop >= 9000) {
+  if (scrollTop >= 9500) {
     taskCi.style.opacity = 0;
     taskCi.style.opacity = 0;
     allrounder.style.opacity = 0;
   }
-  if (scrollTop <= 9000) {
+  if (scrollTop <= 9500) {
     ctaButton.style.opacity = 0;
   }
 
