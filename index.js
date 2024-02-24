@@ -110,6 +110,7 @@ function updateCursorPositionOnScroll() {
     sectionTwoHeading.style.opacity = 0;
     cursor.style.opacity = 1;
     blobExpanded = false;
+    changeThemeColor("#fff");
   }
 
   if (blobExpanded && cursor.offsetHeight >= 3600) {
