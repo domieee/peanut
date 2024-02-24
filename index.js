@@ -24,6 +24,7 @@ const secondBlob = document.querySelector("#blobSvg2");
 
 const techno = document.querySelector(".techno");
 let blobExpanded = false;
+let blobTriggered = false;
 
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
@@ -55,8 +56,17 @@ function updateCursorPositionOnScroll() {
     cursor.style.left = "61%";
     cursor.style.top = "36%";
   }
+  if (blobTriggered && scrollTop < 3600) {
+    cursor.style.display = "none";
+    cursor.style.opacity = 0;
+  }
+  if (blobTriggered && scrollTop > 3600) {
+    cursor.style.display = "block";
+    cursor.style.opacity = 1;
+  }
 
   if (scrollTop > 3600) {
+    blobTriggered = true;
     cursor.style.width = "4000px";
     cursor.style.height = "4000px";
     cursor.style.left = "50%";
