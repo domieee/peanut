@@ -9,7 +9,7 @@ const ctaHeading = document.querySelector(".cta-heading");
 const ctaSubtext = document.querySelector(".cta-subtext");
 const sectionTwoHeading = document.querySelector(".section-two-heading");
 const sectionTwoSubHeading = document.querySelector(".section-two-subheading");
-const navButton = document.querySelector(".navButton");
+
 const allrounder = document.querySelector(".allrounder");
 
 const ctaButton = document.querySelector(".cta-button");
@@ -59,12 +59,10 @@ function updateCursorPositionOnScroll() {
   // Section One Movement --->
 
   if (scrollTop >= 100) {
-    navButton.style.opacity = 1;
     cursor.style.opacity = 1;
   }
 
   if (scrollTop <= 100) {
-    navButton.style.opacity = 0;
     cursor.style.opacity = 0;
   }
 
@@ -110,7 +108,7 @@ function updateCursorPositionOnScroll() {
     sectionTwoHeading.style.opacity = 0;
     cursor.style.opacity = 1;
     blobExpanded = false;
-    changeThemeColor("#fff");
+    container.classList.remove(".sectionOneScrolled");
   }
 
   if (blobExpanded && cursor.offsetHeight >= 3600) {
@@ -124,7 +122,7 @@ function updateCursorPositionOnScroll() {
     cursor.style.left = "50%";
     cursor.style.top = "4%";
     container.style.backgroundColor = "#000";
-    changeThemeColor("#000");
+    container.classList.add("sectionOneScrolled");
     secondBlob.style.display = "block";
     secondBlob.style.width = "150px";
     secondBlob.style.height = "150px";

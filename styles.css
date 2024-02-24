@@ -39,6 +39,13 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.sectionOneScrolled {
+  background-color: #000; /* Example: change background color */
+  transition: all 0.5s ease;
 }
 
 nav {
