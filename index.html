@@ -20,11 +20,15 @@
       content="Tauchen Sie ein in die inspirierende Welt von peanuts. Wir sind Ihre kreative Schmiede für hochwertige Webentwicklungslösungen, exzellentes Design und Ihren Social Media Auftritt."
     />
 
-    <title>peanuts. | a Full-Service Agency</title>
+    <title>peanuts.</title>
     <link rel=" stylesheet" href="./styles.css" />
   </head>
 
   <body>
+    <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
     <div id="progressBarContainer">
       <div id="progressBar"></div>
     </div>
@@ -62,16 +66,16 @@
             </svg>
           </div>
 
-          <h1 class="cta-heading">
+          <h1 class="example4 cta-heading">
             Moderne <span class="techno">Technologie</span> trifft exzellentes
             Design<span class="dot">.</span>
           </h1>
           <p class="cta-subtext">
-            Innovative Technologie verschmilzt mit herausragendem Design, um
-            eine einzigartige Erfahrung zu schaffen. Entdecken Sie unsere
-            wegweisenden Lösungen, die modernste Technologie mit ästhetischem
-            Design vereinen und Ihnen dabei helfen, sich von der Konkurrenz
-            abzuheben.
+            Innovative Technologie und exzellentes Design verschmelzen, um eine
+            besondere Erfahrung zu bieten. Wir sind dein Ansprechpartner für
+            Lösungen, die fortschrittliche Technologie und ansprechendes Design
+            kombinieren, um Ihnen einen Vorteil gegenüber der Konkurrenz zu
+            verschaffen.
           </p>
         </article>
 
@@ -104,9 +108,26 @@
           </div>
           <article class="future">
             <h2 class="section-two-heading">
-              Die Zukunft ist dynamisch<span class="dot">.</span>
+              Die Zukunft ist
+
+              <span class="dot">.</span>
             </h2>
-            <p class="section-two-subheading">
+            <div class="dynamic">
+              <div class="animate4">
+                <p>d</p>
+                d
+              </div>
+              <div class="animate4">y</div>
+              <div class="animate4">n</div>
+              <div class="animate4">a</div>
+              <div class="animate4">m</div>
+              <div class="animate4">i</div>
+              <div class="animate4">s</div>
+              <div class="animate4">c</div>
+              <div class="animate4">h</div>
+            </div>
+
+            <p class="animate4 section-two-subheading">
               Die rasante Digitalisierung stellt kleine und mittlere Unternehmen
               (KMU) vor die Herausforderung, mit dem Fortschritt Schritt zu
               halten. Unsere Lösungen helfen KMU im gesamten DACH-Bereich, den
@@ -168,8 +189,13 @@
               Design Ihrer Werbematerialien bis hin zur Gestaltung Ihrer
               Corporate Identity - wir kümmern uns um jedes Detail. Unser
               erfahrenes Team aus Experten steht Ihnen zur Seite, um Ihre Vision
-              Wirklichkeit werden zu lassen. Kontaktieren Sie uns noch heute und
-              lassen Sie uns gemeinsam Ihre Marke zum Erfolg führen.
+              Wirklichkeit werden zu lassen.
+              <br />
+              <br />
+              <b>
+                Kontaktieren Sie uns noch heute und lassen Sie uns gemeinsam
+                Ihre Marke zum Erfolg führen.
+              </b>
             </p>
             <button class="cta-button">Get in contact</button>
           </article>
@@ -191,9 +217,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
     <!-- Include the ScrollMagic library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-    <!-- Include the GSAP animation plugin for ScrollMagic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

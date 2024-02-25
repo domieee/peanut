@@ -40,12 +40,12 @@ h1 {
   justify-content: center;
   flex-direction: column;
   background-color: #fff;
-  transition: all 0.5s ease;
+  transition: 0.2s ease;
 }
 
 .sectionOneScrolled {
   background-color: #000; /* Example: change background color */
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 nav {
@@ -122,6 +122,12 @@ nav button:hover {
   line-height: 47px;
   margin-inline: 50px;
 }
+.cta-subtext {
+  opacity: 0;
+  transition: 2s ease;
+  position: relative;
+  top: 0%;
+}
 
 .landingpage-cta .cta-subtext {
   color: #fff;
@@ -190,13 +196,15 @@ nav button:hover {
   align-items: center;
   padding: 0px;
 }
-
+.dynamic {
+  display: flex;
+}
 .section-two-heading {
   position: relative;
   top: -0%;
   color: #fff;
   font-size: 2em;
-  transition: 0.2s linear;
+  transition: all 0.2s linear;
 }
 .section-two-subheading {
   margin-top: 7.5px;
@@ -221,6 +229,16 @@ nav button:hover {
   height: 5px;
   background-color: #f3f3f3;
   z-index: 9999;
+}
+
+/* This will hide the scrollbar for the whole page */
+html {
+  overflow-y: scroll;
+  scrollbar-width: none; /* For Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
 #progressBar {

@@ -1,3 +1,5 @@
+// Your ScrollMagic code here
+
 const cursor = document.querySelector(".cursor");
 const container = document.querySelector(".sectionOne");
 
@@ -53,19 +55,42 @@ function changeThemeColor(color) {
 
 document.documentElement.scrollTop = 0;
 
+var tween = TweenMax.staggerFromTo(
+  ".animate4",
+  2,
+  { left: 100 },
+  { left: 0, ease: Back.easeOut },
+  0.15
+);
+var controller = new ScrollMagic.Controller();
+
+// build scene
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".future",
+  duration: 20,
+})
+  .setTween(tween)
+  .addIndicators({ name: "staggering" }) // add indicators (requires plugin)
+  .addTo(controller);
+
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
   const scrollFactor = 0.3;
-  const cursorOffset = scrollTop * scrollFactor;
+  const cursorOffset = scrollTop;
 
   // Section One Movement --->
 
   if (scrollTop >= 100) {
     cursor.style.opacity = 1;
+    ctaSubtext.style.top = "-5%";
+    ctaSubtext.style.opacity = 1;
+  } else {
   }
 
   if (scrollTop <= 100) {
     cursor.style.opacity = 0;
+    ctaSubtext.style.top = "0%";
+    ctaSubtext.style.opacity = 0;
   }
 
   if (scrollTop < 2800) {
