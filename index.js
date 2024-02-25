@@ -156,16 +156,16 @@ function updateCursorPositionOnScroll() {
     cursor.style.left = "61%";
     cursor.style.top = "36%";
   }
-  if (blobTriggered && scrollTop < 2000) {
+  if (blobTriggered && scrollTop < 1900) {
     cursor.style.display = "none";
     cursor.style.opacity = 0;
   }
-  if (blobTriggered && scrollTop > 2000) {
+  if (blobTriggered && scrollTop > 1900) {
     cursor.style.display = "block";
     cursor.style.opacity = 1;
   }
 
-  if (scrollTop > 2000) {
+  if (scrollTop > 1900) {
     progressColor = "#ffa500";
     blobTriggered = true;
     cursor.style.width = "4000px";
@@ -180,7 +180,7 @@ function updateCursorPositionOnScroll() {
     "🚀 ~ file: index.js:65 ~ updateCursorPositionOnScroll ~ scrollTop:",
     scrollTop
   );
-  if (scrollTop < 2000) {
+  if (scrollTop < 1900) {
     progressColor = "#0000ff";
     ctaHeading.style.opacity = 1;
     ctaSubtext.style.opacity = 1;
