@@ -24,17 +24,22 @@ const taskCi = document.querySelector(".task-ci");
 
 const secondBlob = document.querySelector("#blobSvg2");
 
+let progressColor = "#0000ff";
+
 const techno = document.querySelector(".techno");
 let blobExpanded = false;
 let blobTriggered = false;
 
 function updateProgressBar() {
+  const progressBar = document.getElementById("progressBar");
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   var scrollHeight =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   var scrollPercentage = (scrollTop / scrollHeight) * 100;
-  document.getElementById("progressBar").style.width = scrollPercentage + "%";
+
+  progressBar.style.width = scrollPercentage + "%";
+  progressBar.style.backgroundColor = progressColor;
 }
 
 function changeThemeColor(color) {
@@ -55,23 +60,22 @@ function changeThemeColor(color) {
 
 document.documentElement.scrollTop = 0;
 
-var tween = TweenMax.staggerFromTo(
-  ".animate4",
-  2,
-  { left: 100 },
-  { left: 0, ease: Back.easeOut },
-  0.15
-);
+var tween = TweenMax.to(".animate4", 1, { x: -1000 }); // Example tween
 var controller = new ScrollMagic.Controller();
 
 // build scene
-var scene = new ScrollMagic.Scene({
-  triggerElement: ".future",
-  duration: 20,
-})
-  .setTween(tween)
-  .addIndicators({ name: "staggering" }) // add indicators (requires plugin)
-  .addTo(controller);
+
+// Define start and end scroll positions for the opacity change
+const animationStartScrollY = 0; // Start changing opacity at this scroll position
+const animationEndScrollY = 1000; // Finish changing opacity at this scroll position
+
+// Function to update opacity based on scroll position
+function updateOpacityOnScroll() {
+  cursor.style.opacity = 1;
+}
+
+// Listen to scroll events
+window.addEventListener("DOMContentLoaded", updateOpacityOnScroll);
 
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
@@ -80,17 +84,31 @@ function updateCursorPositionOnScroll() {
 
   // Section One Movement --->
 
-  if (scrollTop >= 100) {
+  if (scrollTop >= 200) {
     cursor.style.opacity = 1;
-    ctaSubtext.style.top = "-5%";
+    ctaHeading.style.top = `-${scrollTop / 500}%`;
+
     ctaSubtext.style.opacity = 1;
   } else {
+    ctaSubtext.style.top = "0%";
+    ctaHeading.style.top = "0%";
   }
 
-  if (scrollTop <= 100) {
-    cursor.style.opacity = 0;
+  if (scrollTop >= 250) {
+    cursor.style.opacity = 1;
+
+    ctaSubtext.style.top = `-${scrollTop / 100}%`;
+    ctaSubtext.style.opacity = 1;
+  } else {
     ctaSubtext.style.top = "0%";
+    ctaHeading.style.top = "0%";
+  }
+
+  if (scrollTop < 100) {
+    cursor.style.opacity = 0;
     ctaSubtext.style.opacity = 0;
+    ctaSubtext.style.top = "0%";
+    ctaHeading.style.top = "0";
   }
 
   if (scrollTop < 2800) {
@@ -116,6 +134,7 @@ function updateCursorPositionOnScroll() {
   }
 
   if (scrollTop > 3600) {
+    progressColor = "#ffa500";
     blobTriggered = true;
     cursor.style.width = "4000px";
     cursor.style.height = "4000px";
@@ -130,6 +149,7 @@ function updateCursorPositionOnScroll() {
     scrollTop
   );
   if (scrollTop < 3600) {
+    progressColor = "#0000ff";
     ctaHeading.style.opacity = 1;
     ctaSubtext.style.opacity = 1;
     sectionTwoHeading.style.opacity = 0;
@@ -265,6 +285,19 @@ function updateCursorPositionOnScroll() {
 window.addEventListener("scroll", () => {
   updateCursorPositionOnScroll();
 });
+function checkScrollAndTriggerAnimation() {
+  const triggerScrollY = 5200; // Example scroll position to start animation
+
+  if (window.scrollY >= triggerScrollY) {
+    // Directly trigger the tween without a ScrollMagic scene
+    tween.play();
+  } else {
+    tween.reverse();
+  }
+}
+
+// Listen to scroll events
+window.addEventListener("scroll", checkScrollAndTriggerAnimation);
 
 // Event listener for scroll events to update the progress bar
 window.addEventListener("scroll", updateProgressBar);

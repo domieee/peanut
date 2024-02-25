@@ -166,14 +166,15 @@ nav button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 20px;
+  height: 20px;
   opacity: 0;
   border-radius: 50%;
   mix-blend-mode: difference;
   z-index: 2000;
   filter: invert(1);
   pointer-events: none;
+  transition: opacity 1s ease;
   transition: top 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5),
     left 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5), width 0.3s ease,
     height 0.3s ease;
@@ -205,6 +206,18 @@ nav button:hover {
   color: #fff;
   font-size: 2em;
   transition: all 0.2s linear;
+}
+
+.letter {
+  color: #fff;
+  display: inline-block;
+  font-size: 2em;
+  opacity: 1; /* Make sure letters are visible initially */
+  transition: transform 0.5s ease;
+}
+
+.animtate4 {
+  color: #fff;
 }
 .section-two-subheading {
   margin-top: 7.5px;
@@ -245,6 +258,7 @@ html::-webkit-scrollbar {
   height: 100%;
   background-color: #0000ff;
   width: 0%;
+  transition: background-color 0.1s ease;
 }
 
 #blobSvg2 {
@@ -326,6 +340,11 @@ html::-webkit-scrollbar {
 .icon-tabler {
   z-index: 100000;
   color: #fff;
+}
+
+.animtate4 {
+  color: white;
+  z-index: 1000;
 }
 
 .task-dev {
