@@ -74,21 +74,53 @@ function updateOpacityOnScroll() {
   cursor.style.opacity = 1;
 }
 
+function convertNumber(n) {
+  let convertedValue;
+
+  if (n >= 90 && n <= 99) {
+    convertedValue = 0.9;
+  } else if (n >= 80 && n <= 89) {
+    convertedValue = 0.8;
+  } else if (n >= 70 && n <= 79) {
+    convertedValue = 0.7;
+  } else if (n >= 60 && n <= 69) {
+    convertedValue = 0.6;
+  } else if (n >= 50 && n <= 59) {
+    convertedValue = 0.5;
+  } else if (n >= 40 && n <= 49) {
+    convertedValue = 0.4;
+  } else if (n >= 30 && n <= 39) {
+    convertedValue = 0.3;
+  } else if (n >= 20 && n <= 29) {
+    convertedValue = 0.2;
+  } else if (n >= 10 && n <= 19) {
+    convertedValue = 0.1;
+  } else if (n < 1 && n > 0) {
+    // For numbers between 0 and 1, not including 0 or 1
+    convertedValue = Math.floor(n * 10) / 10;
+  } else {
+    return n; // Return the number as is if it doesn't match any condition
+  }
+
+  // Apply rounding down to one decimal place for the converted value
+  return Math.floor(convertedValue * 10) / 10;
+}
+
+// Example usage
+let numbers = [95, 85, 75, 45, 20, 10, 5, 0.208, 0.95];
+let convertedNumbers = numbers.map(convertNumber);
+console.log(convertedNumbers);
+
 // Listen to scroll events
 window.addEventListener("DOMContentLoaded", updateOpacityOnScroll);
 
 function updateCursorPositionOnScroll() {
   const scrollTop = window.scrollY;
-  const scrollFactor = 0.3;
-  const cursorOffset = scrollTop;
 
   // Section One Movement --->
 
   if (scrollTop >= 200) {
     cursor.style.opacity = 1;
-    ctaHeading.style.top = `-${scrollTop / 500}%`;
-
-    ctaSubtext.style.opacity = 1;
   } else {
     ctaSubtext.style.top = "0%";
     ctaHeading.style.top = "0%";
@@ -97,7 +129,7 @@ function updateCursorPositionOnScroll() {
   if (scrollTop >= 250) {
     cursor.style.opacity = 1;
 
-    ctaSubtext.style.top = `-${scrollTop / 100}%`;
+    ctaHeading.style.opacity = `${scrollTop / 3000}%`;
     ctaSubtext.style.opacity = 1;
   } else {
     ctaSubtext.style.top = "0%";
@@ -108,32 +140,32 @@ function updateCursorPositionOnScroll() {
     cursor.style.opacity = 0;
     ctaSubtext.style.opacity = 0;
     ctaSubtext.style.top = "0%";
-    ctaHeading.style.top = "0";
+    ctaHeading.style.top = "0%";
   }
 
-  if (scrollTop < 2800) {
+  if (scrollTop < 1500) {
     cursor.style.width = "200px";
     cursor.style.height = "200px";
     cursor.style.left = "50%";
     cursor.style.top = "50%";
   }
 
-  if (scrollTop > 2800) {
+  if (scrollTop > 1500) {
     cursor.style.width = "120%";
     cursor.style.height = "120%";
     cursor.style.left = "61%";
     cursor.style.top = "36%";
   }
-  if (blobTriggered && scrollTop < 3600) {
+  if (blobTriggered && scrollTop < 2000) {
     cursor.style.display = "none";
     cursor.style.opacity = 0;
   }
-  if (blobTriggered && scrollTop > 3600) {
+  if (blobTriggered && scrollTop > 2000) {
     cursor.style.display = "block";
     cursor.style.opacity = 1;
   }
 
-  if (scrollTop > 3600) {
+  if (scrollTop > 2000) {
     progressColor = "#ffa500";
     blobTriggered = true;
     cursor.style.width = "4000px";
@@ -148,7 +180,7 @@ function updateCursorPositionOnScroll() {
     "🚀 ~ file: index.js:65 ~ updateCursorPositionOnScroll ~ scrollTop:",
     scrollTop
   );
-  if (scrollTop < 3600) {
+  if (scrollTop < 2000) {
     progressColor = "#0000ff";
     ctaHeading.style.opacity = 1;
     ctaSubtext.style.opacity = 1;
@@ -159,7 +191,7 @@ function updateCursorPositionOnScroll() {
     changeThemeColor("#fff");
   }
 
-  if (blobExpanded && cursor.offsetHeight >= 3600) {
+  if (blobExpanded && cursor.offsetHeight >= 2000) {
     stroke.style.opacity = 1;
     stroke.style.width = "100%";
     stroke.style.height = "100vh";
@@ -177,7 +209,7 @@ function updateCursorPositionOnScroll() {
     secondBlob.style.height = "150px";
   }
 
-  if (!blobExpanded && cursor.offsetHeight <= 3600) {
+  if (!blobExpanded && cursor.offsetHeight <= 2000) {
     cta.style.width = "100%";
     container.style.backgroundColor = "#fff";
 
