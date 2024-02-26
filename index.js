@@ -184,7 +184,8 @@ function updateCursorPositionOnScroll() {
     ctaHeading.style.opacity = 1;
     ctaSubtext.style.opacity = 1;
     sectionTwoHeading.style.opacity = 0;
-    cursor.style.mixBlendMode = "differnce";
+    cursor.style.mixBlendMode = "difference";
+    cursor.style.filter = "invert(1)";
     cursor.style.opacity = 1;
     blobExpanded = false;
     container.classList.remove(".sectionOneScrolled");
