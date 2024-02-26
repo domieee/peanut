@@ -187,7 +187,7 @@ nav button:hover {
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
   transition: opacity 0.1s ease;
-  filter: invert(1); /* Add the filter to invert the color of the text */
+  filter: invert(1);
 }
 
 .strokeBusiness {
@@ -201,9 +201,11 @@ nav button:hover {
   align-items: center;
   padding: 0px;
 }
+
 .dynamic {
   display: flex;
 }
+
 .section-two-heading {
   position: relative;
   top: -0%;
@@ -216,7 +218,6 @@ nav button:hover {
   color: #fff;
   display: inline-block;
   font-size: 2em;
-  opacity: 1; /* Make sure letters are visible initially */
   transition: 0.5s ease;
 }
 
@@ -249,14 +250,13 @@ nav button:hover {
   z-index: 9999;
 }
 
-/* This will hide the scrollbar for the whole page */
 html {
   overflow-y: scroll;
-  scrollbar-width: none; /* For Firefox */
+  scrollbar-width: none;
 }
 
 html::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
 #progressBar {
