@@ -36,11 +36,9 @@ h1 {
   position: sticky;
   display: flex;
   top: 0;
-  display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: #fff;
-  transition: 0.2s ease;
 }
 
 .sectionOneScrolled {
@@ -175,9 +173,12 @@ nav button:hover {
   border-radius: 50%;
   mix-blend-mode: difference;
   z-index: 2000;
-  filter: invert(1);
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -o-filter: invert(100%);
+  -ms-filter: invert(100%);
   pointer-events: none;
-  transition: opacity 1s ease;
   transition: top 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5),
     left 0.3s cubic-bezier(0.55, 0.28, 0.85, 0.5), width 0.3s ease,
     height 0.3s ease;
