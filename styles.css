@@ -208,7 +208,7 @@ nav button:hover {
   top: -0%;
   color: #fff;
   font-size: 2em;
-  transition: all 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .letter {
@@ -216,7 +216,7 @@ nav button:hover {
   display: inline-block;
   font-size: 2em;
   opacity: 1; /* Make sure letters are visible initially */
-  transition: transform 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .animtate4 {
@@ -230,6 +230,7 @@ nav button:hover {
   position: relative;
   line-height: 20px;
   color: #fff;
+  opacity: 0;
   transition: 0.2s linear;
 }
 

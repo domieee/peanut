@@ -167,7 +167,6 @@ function updateCursorPositionOnScroll() {
 
   if (scrollTop > 1900) {
     progressColor = "#ffa500";
-    blobTriggered = true;
     cursor.style.width = "4000px";
     cursor.style.height = "4000px";
     cursor.style.left = "50%";
@@ -237,7 +236,7 @@ function updateCursorPositionOnScroll() {
   if (scrollTop < 5000) {
     vcsButton.style.opacity = 0;
     sectionTwoHeading.style.top = "0%";
-    sectionTwoSubHeading.style.opacity = 0;
+
     sectionTwoSubHeading.style.top = "0%";
   }
 
@@ -246,7 +245,6 @@ function updateCursorPositionOnScroll() {
     secondBlob.style.top = "300%";
     sectionTwoHeading.style.opacity = 0;
     sectionTwoSubHeading.style.opacity = 0;
-
     vcsButton.style.opacity = 0;
   }
 
