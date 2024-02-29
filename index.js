@@ -140,6 +140,7 @@ function updateCursorPositionOnScroll() {
   if (!blobExpanded && cursor.offsetHeight <= 2000) {
     cta.style.width = "100%";
     container.style.backgroundColor = "#fff";
+    cursor.style.filter = "invert(1)";
     cta.style.opacity = 1;
     stroke.style.opacity = 0;
     stroke.style.width = 0;

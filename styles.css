@@ -106,12 +106,9 @@ nav button:hover {
   align-items: center;
 }
 
-.cta-heading {
-}
-
 .landingpage-cta .cta-heading,
 .landingpage-cta .cta-subtext {
-  position: relative; /* Use relative positioning for the cta-heading and cta-subtext */
+  position: relative;
   margin-bottom: 20px;
   transition: opacity 0.1s ease;
 }
